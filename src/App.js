@@ -14,8 +14,7 @@ const App = () => {
     setEmail("");
     setPassword("");
     console.log(username, email, password);
-    axios
-      .post("http://localhost:8000/signup", {
+    axios.post("http://localhost:8000/signup", {
         username: username,
         email: email,
         password: password,
@@ -64,7 +63,7 @@ const App = () => {
       </form>
       
       {/* <Signup/> */}      
-      {/* <Login /> */}
+      
       <br/><br/>
       <Home/>
     </>
