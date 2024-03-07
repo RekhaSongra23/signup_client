@@ -1,30 +1,33 @@
-import React ,{useState}from 'react'
-import axios from "axios"
-import "./App.css"
-//import Login from './Login'
-
+import React, { useState } from "react";
+import axios from "axios";
+import "./App.css";
+import Home from "./Home";
 
 const App = () => {
-   const[username,setUsername]=useState('')
-  const [email,setEmail]=useState('')
-  const [password,setPassword]=useState('')
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleSubmit= (e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     setUsername("");
     setEmail("");
     setPassword("");
-    console.log(username,email,password)
-    axios.post('http://localhost:8000/signup',{ username:username, email:email, password:password})
-    .then((res)=>{
-      console.log(res)
-      alert("data submitted")
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-  }
-
+    console.log(username, email, password);
+    axios
+      .post("http://localhost:8000/signup", {
+        username: username,
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        console.log(res);
+        alert("data submitted");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <>
@@ -59,9 +62,12 @@ const App = () => {
         />
         <button type="submit">Submit</button>
       </form>
-
       
+      {/* <Signup/> */}      
+      {/* <Login /> */}
+      <br/><br/>
+      <Home/>
     </>
-  );  
-}
-export default App
+  );
+};
+export default App;

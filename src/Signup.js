@@ -25,7 +25,7 @@
 
 //   return (
 //     <>
-//       <h3>SIGNUP</h3>
+//       <h3>SIGNUP </h3>
 //       <form onSubmit={handleSubmit}>
 //         <p>Username</p>
 //         <input
@@ -62,5 +62,4 @@
 //     </>
 //   );
 // };
-
 // export default Signup;
